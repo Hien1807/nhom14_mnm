@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.6.1",
+    "laravel-echo": "^1.14.0",
+    "laravel-mix": "^6.0.6",
+    "sass": "^1.20.1",
+    "sass-loader": "^8.0.0"
+  }
+}
+
