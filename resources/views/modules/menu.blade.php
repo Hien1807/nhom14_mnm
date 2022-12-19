@@ -26,14 +26,15 @@
               </li>                                                  
               <li >
                 <a href="{!!url('laptop')!!}" > Laptop </a>                
-              </li>    
+              </li>
               <li>
                 <a href="{!!url('pc')!!}" > Máy Tính </a>                
               </li>                                          
               <li>
                <a href="{!!url('tin-tuc')!!}" > Tin Tức - Khuyễn Mãi </a>                    
-              </li>                                            
+              </li>
             </ul>
+
              <ul class="nav navbar-nav pull-right">
               {{-- <li><a href="{{ url('/admin/home') }}">Vào trang quản trị</a></li> --}}
               <li class="dropdown">

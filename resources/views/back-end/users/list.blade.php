@@ -40,6 +40,7 @@
 										<th>Điện thoại</th>
 										<th>Email</th>										
 										<th>Ngày đăng ký</th>
+										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -51,6 +52,10 @@
 											<td>{!!$row->phone!!}</td>
 											<td>{!!$row->email!!}</td>											
 											<td>{!!$row->created_at!!}</td>
+											<td>
+												<a href="{!!url('admin/khachhang/edit/'.$row->id)!!}" title="Chi tiết"> Cập nhật</a> &nbsp;
+												<a href="{!!url('admin/khachhang/del/'.$row->id)!!}"  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')">Xóa bỏ</a>
+											</td>
 										</tr>
 									@endforeach								
 								</tbody>

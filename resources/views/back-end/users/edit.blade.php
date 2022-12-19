@@ -19,35 +19,27 @@
 			<div class="col-lg-12">
 				<div class="panel panel-default">					
 					<div class="panel-body">
-					@if (count($errors) > 0)
-					    <div class="alert alert-danger">
-					        <ul>
-					            @foreach ($errors->all() as $error)
-					                <li>{{ $error }}</li>
-					            @endforeach
-					        </ul>
-					    </div>
-					    @elseif (Session()->has('flash_level'))
-					    	<div class="alert alert-success">
-						        <ul>
-						            {!! Session::get('flash_massage') !!}	
-						        </ul>
-						    </div>
-						@endif
+
 						<form action="" method="POST" role="form">
 				      		{{ csrf_field() }}
-				      		<div class="form-group">
-					      		<label for="input-id"> Chọn Quyền </label>
-					      		<select name="sltCate" id="inputSltCate" class="form-control">
-					      			<option value="1">- Quản trị --</option> 	
-					      			<option value="2">- Nhân viên --</option> 		
-					      		</select>
-				      		</div>
+
 				      		<div class="form-group">
 				      			<label for="input-id">Tên Khách hàng</label>
-				      			<input type="text" name="txtName" id="inputTxtName" class="form-control" value="{!! old('txtCateName', isset($data['name']) ? $data['name'] : null)!!}" required="required">
+				      			<input type="text" name="txtnameu" id="inputTxtName" class="form-control" value="{!! old('txtnameu', isset($data['name']) ? $data['name'] : null)!!}" required="required">
 				      		</div>
-				      		<input type="submit" name="btnCateAdd" class="btn btn-primary" value="Thêm danh mục" class="button" />
+							<div class="form-group">
+								<label for="input-id">Email</label>
+								<input type="text" name="txtemailu" id="inputTxtemail" class="form-control" value="{!! old('txtemailu', isset($data['email']) ? $data['email'] : null)!!}" required="required">
+							</div>
+							<div class="form-group">
+								<label for="input-id">Số điện thoại</label>
+								<input type="text" name="txtphone" id="inputTxtphone" class="form-control" value="{!! old('txtphone', isset($data['phone']) ? $data['phone'] : null)!!}" required="required">
+							</div>
+							<div class="form-group">
+								<label for="input-id">Địa chỉ</label>
+								<input type="text" name="txtaddress" id="inputTxtaddress" class="form-control" value="{!! old('txtaddress', isset($data['address']) ? $data['address'] : null)!!}" required="required">
+							</div>
+				      		<input type="submit" name="btnCateAdd" class="btn btn-primary" value="Cập nhật" class="button" />
 				      	</form>					      	
 					</div>
 				</div>
